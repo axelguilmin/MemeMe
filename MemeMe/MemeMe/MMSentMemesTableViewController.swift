@@ -24,11 +24,11 @@ class MMSentMemesTableViewController : UITableViewController, UITableViewDataSou
 			cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "memeCell")
 		}
 		
-		let imageView = cell!.contentView.viewWithTag(101) as UIImageView
-		let label = cell!.contentView.viewWithTag(102) as UILabel
+		let imageView = cell!.contentView.viewWithTag(101) as! UIImageView
+		let label = cell!.contentView.viewWithTag(102) as! UILabel
 
 		imageView.image = meme.meme
-		label.text = meme.top + " " + meme.bottom
+		label.text = (meme.top as String) + " " + (meme.bottom as String)
 		
 		return cell!
 	}
@@ -53,8 +53,8 @@ class MMSentMemesTableViewController : UITableViewController, UITableViewDataSou
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showMemeDetail" {
-			let detailVS = segue.destinationViewController as MMMemeDetailViewController
-			let indexPath = self.tableView.indexPathForCell(sender as UITableViewCell)
+			let detailVS = segue.destinationViewController as! MMMemeDetailViewController
+			let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
 			detailVS.meme = MMDataController.instance.memes[indexPath!.row]
 			
 		}

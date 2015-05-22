@@ -209,16 +209,16 @@ class MMEditorViewController: UIViewController, UINavigationControllerDelegate, 
 	// MARK:  UIResponder
 	
 	/// Hides keyboard when another part of layout was touched
-	override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+	override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
 		self.view.endEditing(true)
-		super.touchesBegan(touches, withEvent: event)
+		super.touchesBegan(touches as Set<NSObject>, withEvent: event)
 	}
 
 	// MARK: Method
 	
 	private func getKeyboardHeight(notification: NSNotification) -> CGFloat {
 		let userInfo = notification.userInfo
-		let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as NSValue // of CGRect
+		let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
 		return keyboardSize.CGRectValue().height
 	}
 	

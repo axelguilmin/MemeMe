@@ -18,11 +18,11 @@ class MMSentMemesCollectionController : UICollectionViewController, UICollection
 	
 	override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 		
-		let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCell", forIndexPath: indexPath) as UICollectionViewCell
+		let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCell", forIndexPath: indexPath) as! UICollectionViewCell
 		
 		let meme = MMDataController.instance.memes[indexPath.item]
 		
-		let imageView = cell.viewWithTag(101) as UIImageView
+		let imageView = cell.viewWithTag(101) as! UIImageView
 		imageView.image = meme.meme
 		
 		return cell
@@ -39,15 +39,15 @@ class MMSentMemesCollectionController : UICollectionViewController, UICollection
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showMemeDetail" {
-			let detailVS = segue.destinationViewController as MMMemeDetailViewController
-			let indexPath = self.collectionView.indexPathForCell(sender as UICollectionViewCell)
+			let detailVS = segue.destinationViewController as! MMMemeDetailViewController
+			let indexPath = self.collectionView!.indexPathForCell(sender as! UICollectionViewCell)
 			detailVS.meme = MMDataController.instance.memes[indexPath!.item]
 			
 		}
 	}
 	
 	override func viewWillAppear(animated: Bool) {
-		self.collectionView.reloadData()
+		self.collectionView!.reloadData()
 		super.viewWillAppear(animated)
 	}
 
@@ -61,8 +61,8 @@ class MMSentMemesCollectionController : UICollectionViewController, UICollection
 		let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
 		let offsetY = navBarHeight! + statusBarHeight
 		
-		self.collectionView.contentInset = UIEdgeInsetsMake(offsetY, 0, 0, 0)
-		self.collectionView.contentOffset = CGPoint(x: 0, y: -offsetY)
-		self.collectionView.scrollIndicatorInsets.top = offsetY
+		self.collectionView!.contentInset = UIEdgeInsetsMake(offsetY, 0, 0, 0)
+		self.collectionView!.contentOffset = CGPoint(x: 0, y: -offsetY)
+		self.collectionView!.scrollIndicatorInsets.top = offsetY
 	}
 }

@@ -20,7 +20,7 @@ class MMSentMemesViewController: UITabBarController {
 		super.viewDidLoad()
 		
 		// Hack to make the navigation bar more transparent from http://stackoverflow.com/a/12389579/1327557
-		let navBarBackground = self.navigationController?.navigationBar.subviews[0] as UIView?
+		let navBarBackground = self.navigationController?.navigationBar.subviews[0] as! UIView?
 		navBarBackground?.alpha = 0.85
 	}
 
