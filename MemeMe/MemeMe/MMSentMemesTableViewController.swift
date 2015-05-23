@@ -19,18 +19,15 @@ class MMSentMemesTableViewController : UITableViewController, UITableViewDataSou
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let meme = MMDataController.instance.memes[indexPath.row]
 		
-		var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("memeCell") as? UITableViewCell
-		if cell == nil {
-			cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "memeCell")
-		}
+		var cell = tableView.dequeueReusableCellWithIdentifier("memeCell") as! UITableViewCell
 		
-		let imageView = cell!.contentView.viewWithTag(101) as! UIImageView
-		let label = cell!.contentView.viewWithTag(102) as! UILabel
+		let imageView = cell.viewWithTag(101) as! UIImageView
+		let label = cell.viewWithTag(102) as! UILabel
 
 		imageView.image = meme.meme
 		label.text = (meme.top as String) + " " + (meme.bottom as String)
 		
-		return cell!
+		return cell
 	}
 	
 	override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
