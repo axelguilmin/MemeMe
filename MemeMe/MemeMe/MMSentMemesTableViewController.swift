@@ -22,7 +22,7 @@ class MMSentMemesTableViewController : UITableViewController, UITableViewDataSou
 		var cell:MMSentMemeTableCell = tableView.dequeueReusableCellWithIdentifier("MMSentMemeTableCell") as! MMSentMemeTableCell
 		
 		cell.memeThumbnail.image = meme.meme
-		cell.memeName.text = meme.top + " " + meme.bottom
+		cell.memeName.text = (meme.top as String) + " " + (meme.bottom as String)
 		
 		return cell
 	}
