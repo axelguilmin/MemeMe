@@ -17,6 +17,7 @@
 		7773E4B61B07D76A00294971 /* MMMemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773E4B51B07D76A00294971 /* MMMemeDetailViewController.swift */; };
 		77AB0BA21AFF791E00326711 /* MMDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AB0BA11AFF791E00326711 /* MMDataController.swift */; };
 		77AB0BA41AFFE6A700326711 /* MMSentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AB0BA31AFFE6A700326711 /* MMSentMemesTableViewController.swift */; };
+		77B066BA1B11F55C00B4342B /* MMSentMemeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B066B91B11F55C00B4342B /* MMSentMemeTableCell.swift */; };
 		77D3289E1B0E7E970031D649 /* MMSentMemesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3289D1B0E7E970031D649 /* MMSentMemesCollectionController.swift */; };
 		77D512E91AFD4E6900F1FCF7 /* MMSentMemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D512E81AFD4E6900F1FCF7 /* MMSentMemesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		7773E4B51B07D76A00294971 /* MMMemeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMemeDetailViewController.swift; sourceTree = "<group>"; };
 		77AB0BA11AFF791E00326711 /* MMDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDataController.swift; sourceTree = "<group>"; };
 		77AB0BA31AFFE6A700326711 /* MMSentMemesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSentMemesTableViewController.swift; sourceTree = "<group>"; };
+		77B066B91B11F55C00B4342B /* MMSentMemeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSentMemeTableCell.swift; sourceTree = "<group>"; };
 		77D3289D1B0E7E970031D649 /* MMSentMemesCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSentMemesCollectionController.swift; sourceTree = "<group>"; };
 		77D512E81AFD4E6900F1FCF7 /* MMSentMemesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSentMemesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 		77538A751AF5036A00E99232 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77B066B91B11F55C00B4342B /* MMSentMemeTableCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				77538A571AF5028900E99232 /* MMEditorViewController.swift in Sources */,
 				7773E4B61B07D76A00294971 /* MMMemeDetailViewController.swift in Sources */,
 				77538A551AF5028900E99232 /* AppDelegate.swift in Sources */,
+				77B066BA1B11F55C00B4342B /* MMSentMemeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
